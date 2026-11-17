@@ -1,0 +1,14 @@
+﻿using OpenDCP.Framework.Configuration.Model.Attributes;
+using OpenDCP.Framework.Configuration.Model.Responses.Datasource;
+using OpenDCP.Framework.DataTypes.Equipment.Entities.SensorData;
+using System.Collections.Generic;
+
+namespace OpenDCP.Framework.DataTypes.Equipment.Responses.SensorData
+{
+    public class SensorDataSummaryStatisticsResponse : DatasourceResponse
+    {
+        [ConnectionManagerAttribute(Configuration.Model.Constants.Datasource.RequestPipelineAction.Reduce)]
+        public List<SensorSummaryDataDTO> Data { get; set; } = new List<SensorSummaryDataDTO>();
+    }
+
+}

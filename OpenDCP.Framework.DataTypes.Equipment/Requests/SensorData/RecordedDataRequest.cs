@@ -1,0 +1,18 @@
+﻿using OpenDCP.Framework.Configuration.Model.Entities.Site;
+using System;
+using System.Collections.Generic;
+
+namespace OpenDCP.Framework.DataTypes.Equipment.Requests.SensorData
+{
+    [Obsolete]
+    public class RecordedDataRequest
+    {
+        public List<string> SensorsWebIds { get; set; }
+        public LegacySiteConfigurationDTO_v2 SiteConfiguration { get; set; }
+        public string StartTime { get; set; }
+        public string EndTime { get; set; }
+        public string MaxCount { get; set; }
+        public string FilterExpression { get; set; }
+        public bool? IncludeFilteredValues { get; set; }
+    }
+}
